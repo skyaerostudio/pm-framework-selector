@@ -1,0 +1,271 @@
+{
+  "version": "1.0.0",
+  "last_reviewed": "2024-05-01",
+  "default_weight_scale": 5,
+  "frameworks": [
+    "Scrum",
+    "Kanban",
+    "Scrumban",
+    "XP",
+    "Lean Startup"
+  ],
+  "questions": [
+    {
+      "id": "team_structure",
+      "dimension": "Team composition & stability",
+      "question": "How stable and cross-functional is the delivery team?",
+      "options": [
+        {
+          "id": "stable_cross_functional",
+          "label": "Stable, cross-functional team with clear roles",
+          "weights": {
+            "Scrum": 5,
+            "Kanban": 2,
+            "Scrumban": 3,
+            "XP": 4,
+            "Lean Startup": 1
+          }
+        },
+        {
+          "id": "variable_team",
+          "label": "Team composition changes frequently or relies on specialists",
+          "weights": {
+            "Scrum": -3,
+            "Kanban": 4,
+            "Scrumban": 2,
+            "XP": -2,
+            "Lean Startup": 1
+          }
+        },
+        {
+          "id": "distributed_contributors",
+          "label": "Highly distributed contributors with limited shared rituals",
+          "weights": {
+            "Scrum": -2,
+            "Kanban": 3,
+            "Scrumban": 1,
+            "XP": -3,
+            "Lean Startup": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "cadence_commitment",
+      "dimension": "Cadence & commitment",
+      "question": "What level of time-boxed commitment do stakeholders expect?",
+      "options": [
+        {
+          "id": "high_timeboxed",
+          "label": "High: Stakeholders expect fixed-length increments with committed scope",
+          "weights": {
+            "Scrum": 5,
+            "Kanban": -2,
+            "Scrumban": 3,
+            "XP": 2,
+            "Lean Startup": -1
+          }
+        },
+        {
+          "id": "moderate_commitment",
+          "label": "Moderate: Some cadence desired but scope flexibility is acceptable",
+          "weights": {
+            "Scrum": 2,
+            "Kanban": 2,
+            "Scrumban": 4,
+            "XP": 1,
+            "Lean Startup": 2
+          }
+        },
+        {
+          "id": "continuous_flow",
+          "label": "Low: Continuous flow with minimal commitment expectations",
+          "weights": {
+            "Scrum": -3,
+            "Kanban": 5,
+            "Scrumban": 2,
+            "XP": 0,
+            "Lean Startup": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "work_variability",
+      "dimension": "Work item variability",
+      "question": "How variable are work item sizes and arrival patterns?",
+      "options": [
+        {
+          "id": "predictable_small_batch",
+          "label": "Predictable sizes with planned intake",
+          "weights": {
+            "Scrum": 4,
+            "Kanban": 1,
+            "Scrumban": 3,
+            "XP": 3,
+            "Lean Startup": 1
+          }
+        },
+        {
+          "id": "mixed_variability",
+          "label": "Mixed variability requiring occasional re-planning",
+          "weights": {
+            "Scrum": 1,
+            "Kanban": 3,
+            "Scrumban": 4,
+            "XP": 1,
+            "Lean Startup": 2
+          }
+        },
+        {
+          "id": "high_variability",
+          "label": "Highly variable with unpredictable urgent items",
+          "weights": {
+            "Scrum": -2,
+            "Kanban": 5,
+            "Scrumban": 2,
+            "XP": 0,
+            "Lean Startup": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "discovery_ratio",
+      "dimension": "Discovery vs delivery",
+      "question": "What proportion of work is exploratory discovery versus execution?",
+      "options": [
+        {
+          "id": "heavy_discovery",
+          "label": ">60% discovery experiments and hypothesis testing",
+          "weights": {
+            "Scrum": -1,
+            "Kanban": 1,
+            "Scrumban": 2,
+            "XP": 2,
+            "Lean Startup": 5
+          }
+        },
+        {
+          "id": "balanced",
+          "label": "Balanced mix of discovery and delivery",
+          "weights": {
+            "Scrum": 3,
+            "Kanban": 2,
+            "Scrumban": 4,
+            "XP": 3,
+            "Lean Startup": 3
+          }
+        },
+        {
+          "id": "execution_focus",
+          "label": ">70% delivery execution with clear requirements",
+          "weights": {
+            "Scrum": 4,
+            "Kanban": 2,
+            "Scrumban": 3,
+            "XP": 1,
+            "Lean Startup": -2
+          }
+        }
+      ]
+    },
+    {
+      "id": "governance",
+      "dimension": "Governance & compliance",
+      "question": "What level of governance, documentation, and traceability is required?",
+      "options": [
+        {
+          "id": "high_compliance",
+          "label": "Strict regulatory controls with audit trails",
+          "weights": {
+            "Scrum": 2,
+            "Kanban": 1,
+            "Scrumban": 3,
+            "XP": 1,
+            "Lean Startup": -3
+          }
+        },
+        {
+          "id": "moderate_governance",
+          "label": "Moderate governance with pragmatic documentation",
+          "weights": {
+            "Scrum": 4,
+            "Kanban": 2,
+            "Scrumban": 4,
+            "XP": 2,
+            "Lean Startup": 0
+          }
+        },
+        {
+          "id": "lightweight",
+          "label": "Lightweight governance, speed prioritized",
+          "weights": {
+            "Scrum": 1,
+            "Kanban": 3,
+            "Scrumban": 2,
+            "XP": 3,
+            "Lean Startup": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "improvement_culture",
+      "dimension": "Continuous improvement culture",
+      "question": "How mature is the team's continuous improvement practice?",
+      "options": [
+        {
+          "id": "mature_retros",
+          "label": "Mature, data-driven improvement rituals",
+          "weights": {
+            "Scrum": 4,
+            "Kanban": 3,
+            "Scrumban": 4,
+            "XP": 3,
+            "Lean Startup": 2
+          }
+        },
+        {
+          "id": "emerging",
+          "label": "Emerging culture with some metrics and experimentation",
+          "weights": {
+            "Scrum": 3,
+            "Kanban": 2,
+            "Scrumban": 3,
+            "XP": 2,
+            "Lean Startup": 3
+          }
+        },
+        {
+          "id": "nascent",
+          "label": "Nascent: rituals ad-hoc, limited metrics",
+          "weights": {
+            "Scrum": 1,
+            "Kanban": 2,
+            "Scrumban": 1,
+            "XP": 2,
+            "Lean Startup": 3
+          }
+        }
+      ]
+    }
+  ],
+  "tie_breakers": [
+    {
+      "id": "highest_dimension_alignment",
+      "description": "If two frameworks tie, prefer the one with more 4+ scores across dimensions relevant to stakeholder priorities.",
+      "priority": 1
+    },
+    {
+      "id": "optionality_trigger",
+      "description": "If tie remains and an optional framework received a positive trigger weight (>3) on any question, elevate it for qualitative review.",
+      "priority": 2
+    },
+    {
+      "id": "human_override",
+      "description": "Facilitator reviews narrative rationales with stakeholders for final selection.",
+      "priority": 3
+    }
+  ]
+}
